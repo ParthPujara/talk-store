@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Side Bar</title>
+    <title>Manage Subscription</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-
 <body>
     <div class="navigation">
         <ul>
-            <li class="list active">
+            <li class="list">
                 <a href="./index.html">
                     <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                     <span class="title">Add script</span>
                 </a>
             </li>
-          <li class="list">
+          <li class="list active">
                 <a href="./manage-subscription.html">
                     <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                     <span class="title">Manage Subscription</span>
                 </a>
             </li>
-         <li class="list">
+            <li class="list">
                 <a href="./manage-users.html">
                     <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
                     <span class="title">Manage Users</span>
                 </a>
             </li>
-            <!-- <li class="list">
+            <!--   <li class="list">
+                <a href="#">
+                    <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+                    <span class="title">Messages</span>
+                </a>
+            </li>
+            <li class="list">
                 <a href="#">
                     <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                     <span class="title">Setting</span>
-                </a> -->
-              <!--    </li> <li class="list">
+                </a>
+            </li> <li class="list">
                 <a href="#">
                     <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
                     <span class="title">Help</span>
@@ -57,28 +60,24 @@
     </div>
     <div class="workspace">
         <div class="heading">
-            Add Script
+            Manage Subscription
         </div>
         <div class="d-flex mt-5" style="gap: 100px;">
             <div>
                 <select class="form-control" >
-                    <option value="default" selected disabled>--Select Category--</option>
-                    <option value="1">Category 1</option>
-                    <option value="2">Category 2</option>
+                    <option value="default" selected disabled>--Select Plan--</option>
+                    <option value="1">Scripted</option>
+                    <option value="2">Real Time</option>
                 </select>
             </div>
             <div>
-                <select class="form-control">
-                    <option value="default" selected disabled>--Select Role--</option>
-                    <option value="1">Person One</option>
-                    <option value="2">Person Two</option>
-                </select>
+                <input class="form-control" type="text" placeholder="Set Price">
 
             </div>
             <div>
                 <div class="form-group">
                     
-                    <textarea class="form-control" id="" placeholder="Enter script" rows="3" cols="50"></textarea>
+                    <textarea class="form-control" id="" placeholder="Add Details" rows="3" cols="50"></textarea>
                   </div>
             </div>
         </div>
@@ -87,24 +86,23 @@
         </div>
         <div class="mt-5">
             <table class="table table-hover">
-
+<thead>
+    <tr>
+        <th style="border: none;">Current Plan</th>
+        <th style="border: none;">Plan details</th>
+    </tr>
+</thead>
                 <tbody>
                     <tr>
-                        <th scope="row">Person 1</th>
-                        <td>Script 1</td>
+                        <th scope="row">Plan 1</th>
+                        <td>Plan details of plan 1</td>
                         <td><div class="btn btn-success">Edit</div></td>
                         <td><div class="btn btn-danger">Delete</div></td>
 
                     </tr>
                     <tr>
-                        <th scope="row">Person 2</th>
-                        <td>Scrip 2</td>
-                        <td><div class="btn btn-success">Edit</div></td>
-                        <td><div class="btn btn-danger">Delete</div></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Person 1</th>
-                        <td>Script 1 (2)</td>
+                        <th scope="row">Plan 2</th>
+                        <td>Plan details of plan 2</td>
                         <td><div class="btn btn-success">Edit</div></td>
                         <td><div class="btn btn-danger">Delete</div></td>
                     </tr>
@@ -114,15 +112,6 @@
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <script>
-        const list = document.querySelectorAll('.list');
-        function activeLink() {
-            list.forEach((item) => item.classList.remove('active'));
-            this.classList.add('active');
-        }
-        list.forEach((item) => item.addEventListener('click', activeLink));
-    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -130,5 +119,4 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
