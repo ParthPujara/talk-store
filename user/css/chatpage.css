@@ -484,3 +484,7 @@ html {
     margin-bottom: 15px !important;
   }
 }
+.accuracy{
+  padding-right: 20px;
+  font-weight: bold;
+}
